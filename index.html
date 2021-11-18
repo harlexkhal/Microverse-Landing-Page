@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function OnSubmit() {
+            localStorage.setItem('Email', document.getElementById("email").value);
+            alert("Your Email has been saved.");
+        }
+    </script>
+</head>
+<body style="overflow-x: hidden;">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header" id="header">
+                <a class="navbar-brand" href="#"><img id="header-img" src="micro.png" width="50" height="50" style="margin-top:-14px;" /></a>
+            </div>
+            <ul class="nav navbar-nav" id="navbar">
+                <li><a href="#Email">Email</a></li>
+                <li><a href="#Video">Video</a></li>
+                <li><a href="email.html">View Submitted Email</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row" style="margin-top:100px;" id="Email">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+            <form onsubmit="OnSubmit();">
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control" placeholder="Email" required>
+                </div>
+                <input id="submit" type="submit" class="btn btn-primary" style="width:100%" />
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div class="row" style="margin-top:300px;" id="Video">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <iframe style="width:100%; height:800px" src="https://www.youtube.com/embed/f9ip1iSAptQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row" style="margin-top: 300px" id="Product">
+        <div class="col-sm-1"></div>
+            
+        <div class="col-sm-10">
+            <h1 style="margin-left:50%; margin-right:50%">Product</h1>
+            <img id="header-img" src="micro.png" style="width:100%" height="700" />
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+</body>
+</html>
